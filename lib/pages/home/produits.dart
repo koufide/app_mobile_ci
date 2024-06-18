@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:app_mobile_ci/pages/themes/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -22,8 +23,8 @@ class _ProduitPageState extends State<ProduitPage> {
         produits = json.decode(resp.body);
       });
     }).catchError((erreur) {
-      print('********** Erreur *********');
-      print(erreur);
+      // print('********** Erreur *********');
+      // print(erreur);
     });
   }
 
@@ -33,6 +34,7 @@ class _ProduitPageState extends State<ProduitPage> {
         appBar: AppBar(
           title: const Text("Produits"),
         ),
+
         body: ListView.builder(
           itemCount: produits.length,
           itemBuilder: (context, index) {
@@ -40,21 +42,27 @@ class _ProduitPageState extends State<ProduitPage> {
             return ListTile(
               // title: Text("${produits[index]["nom"]}"),
               title: Card(
-                color: Colors.blueAccent,
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Card(
-                      child: Column(
-                        children: [
-                          Text("${produits[index]["nom"]}"),
-                        ],
-                      ),
+                    SizedBox(
+                      width: 140,
+                      height: 88,
+                      // color: AppColors.blancbbgci,
+                      // Text("data"),
+                      child: Image(image: AssetImage("${produits[index]["image"]}"),),
                     ),
-                    Image(
-                      width: 150,
-                      image: AssetImage("${produits[index]["image"]}"),
+                    Container(
+                      width: 160,
+                      color: AppColors.noirebbgci,
+                       child:  Column(
+                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text("${produits[index]["nom"]}", style: Theme.of(context).textTheme.bodySmall,),
+                          Text("Frais: ${produits[index]["frais"]}", style: Theme.of(context).textTheme.bodySmall,),
+                        ],
+                       )
                     )
+
                   ],
                 ),
               ),
