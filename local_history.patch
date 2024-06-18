@@ -1,0 +1,13 @@
+Index: lib/pages/widgets/drawer.widget.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/pages/widgets/drawer.widget.dart b/lib/pages/widgets/drawer.widget.dart
+--- a/lib/pages/widgets/drawer.widget.dart	
++++ b/lib/pages/widgets/drawer.widget.dart	(date 1718569908279)
+@@ -1,3 +1,4 @@
++import 'package:flutter/material.dart';
+ class MyDrawer extends StatelessWidget {
+   const MyDrawer({super.key});
+ 

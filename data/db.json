@@ -1,0 +1,36 @@
+{
+  "produits": [
+    {
+      "id": 0,
+      "nom": "Compte epargne etude",
+      "frais": 5000,
+      "image": "assets/images/1.PNG",
+      "promotion": false,
+      "note": 5
+    },
+    {
+      "id": 1,
+      "nom": "Compte epargne classique",
+      "frais": 3000,
+      "image": "assets/images/2.PNG",
+      "promotion": false,
+      "note": 4
+    },
+    {
+      "id": 2,
+      "nom": "Compte epargne voyage",
+      "frais": 7000,
+      "image": "assets/images/3.PNG",
+      "promotion": true,
+      "note": 3
+    },
+    {
+      "id": 3,
+      "nom": "Compte epargne immo",
+      "frais": 9000,
+      "image": "assets/images/4.PNG",
+      "promotion": true,
+      "note": 2
+    }
+  ]
+}
