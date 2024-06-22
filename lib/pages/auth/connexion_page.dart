@@ -1,6 +1,8 @@
 import 'package:app_mobile_ci/pages/configuration/colors.dart';
 import 'package:app_mobile_ci/pages/configuration/constants.dart';
+import 'package:app_mobile_ci/pages/configuration/theme.dart';
 import 'package:app_mobile_ci/pages/widgets/bbgci_default_textfield.dart';
+
 // import 'package:flutter/cupertino.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +18,7 @@ class _ConnexionPageState extends State<ConnexionPage> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   bool _isLoading = false;
+  bool _rememberMe = false;
 
   @override
   Widget build(BuildContext context) {
@@ -106,23 +109,55 @@ class _ConnexionPageState extends State<ConnexionPage> {
               children: [
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
+                    padding: EdgeInsets.only(left: 20.0),
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: InkWell(
-                        child: Text("Mot de passe oublié"),
+                        child: Text(
+                          "Password forgotten",
+                          style: TextStyle(
+                            color: MyAppTheme.orangebbgci,
+                            // fontSize: Theme.of(context).textTheme.bodySmall,
+                          ),
+                        ),
                       ),
                     ),
                   ),
                 ),
-
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.only(right: 20.0),
+                    padding: EdgeInsets.only(right: 20.0),
                     child: Align(
                       alignment: Alignment.centerRight,
-                      child: InkWell(
-                        child: Text("Remember me"),
+                      child: Row(
+                        children: [
+                          InkWell(
+                            child: Text(
+                              "Remember me",
+                              style: TextStyle(
+                                color: MyAppTheme.orangebbgci,
+                              ),
+                            ),
+                          ),
+                          // Radio<bool>(
+                          //   value: true,
+                          //   groupValue: _rememberMe,
+                          //   onChanged: (bool? value){
+                          //     setState(() {
+                          //       _rememberMe = value!;
+                          //     });
+                          //   },
+                          // ),
+                          Checkbox(
+                            value: _rememberMe,
+                            // groupValue: _rememberMe,
+                            onChanged: (bool? value){
+                              setState(() {
+                                _rememberMe = value!;
+                              });
+                            },
+                          ),
+                        ],
                       ),
                     ),
                   ),

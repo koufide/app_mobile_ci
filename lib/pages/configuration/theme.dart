@@ -55,9 +55,9 @@ class MyAppTheme {
         size: 53,
         color:  noirebbgci,
       ),
-      inputDecorationTheme: InputDecorationTheme(
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.all(Radius.circular(20.0),)
+      inputDecorationTheme:  const InputDecorationTheme(
+        border:  OutlineInputBorder(
+          borderRadius:  BorderRadius.all(Radius.circular(20.0),)
         ),
         // focusedBorder: OutlineInputBorder(
         //   borderRadius: BorderRadius.all(Radius.circular(30.0),),
@@ -68,6 +68,46 @@ class MyAppTheme {
         //   borderSide: BorderSide(color: orangebbgci),
         // ),
       ),
+
+      // bouton radio
+      radioTheme: RadioThemeData(
+        fillColor: MaterialStateProperty.resolveWith((states) {
+          if (states.contains(MaterialState.selected)) {
+            return noirebbgci;
+          }
+          return orangebbgci;
+        }),
+
+        overlayColor: MaterialStateProperty.resolveWith((states) {
+          if (states.contains(MaterialState.hovered)) {
+            return orangebbgci.withOpacity(0.04);
+          }
+          if (states.contains(MaterialState.focused) || states.contains(MaterialState.pressed)) {
+            return orangebbgci.withOpacity(0.12);
+          }
+          return null;
+        }),
+        splashRadius: 20.0,
+        materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+
+      ),
+
+      checkboxTheme: CheckboxThemeData(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
+        fillColor: MaterialStateProperty.resolveWith((states) {
+          if (states.contains(MaterialState.selected)) {
+            return noirebbgci;
+          }
+          return orangebbgci;
+        }),
+        checkColor: MaterialStateProperty.all(blancbbgci),
+      ),
+
+
+
+
     ),
 
 
@@ -108,6 +148,46 @@ class MyAppTheme {
       //     borderSide: BorderSide(color: noirebbgci),
       //   ),
       // ),
+
+        // bouton radio
+        radioTheme: RadioThemeData(
+          fillColor: MaterialStateProperty.resolveWith((states) {
+            if (states.contains(MaterialState.selected)) {
+              return noirebbgci;
+            }
+            return orangebbgci;
+          }),
+
+          overlayColor: MaterialStateProperty.resolveWith((states) {
+            if (states.contains(MaterialState.hovered)) {
+              return noirebbgci.withOpacity(0.04);
+            }
+            if (states.contains(MaterialState.focused) || states.contains(MaterialState.pressed)) {
+              return noirebbgci.withOpacity(0.12);
+            }
+            return null;
+          }),
+          splashRadius: 20.0,
+          materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+
+        ),
+
+      // CHECKBOX
+      checkboxTheme: CheckboxThemeData(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
+        fillColor: MaterialStateProperty.resolveWith((states) {
+          if (states.contains(MaterialState.selected)) {
+            return noirebbgci;
+          }
+          return orangebbgci;
+        }),
+        checkColor: MaterialStateProperty.all(orangebbgci),
+      ),
+
+
+
     ),
 
 
