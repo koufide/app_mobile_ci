@@ -20,12 +20,15 @@ class _ConnexionPageState extends State<ConnexionPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // title: Text("test1"),
-        leading: Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Image.asset(Constants.imagesDirectory + "/logo_bbg.png"),
+         title: Container(
+           margin: EdgeInsets.only(right: 0, top: 10, bottom: 10),
+           child: Center(
+             child: Image.asset(Constants.imagesDirectory + "/bbglogoci.png",
+             alignment: Alignment.center,
+             ),
+           ),
+         ),
         ),
-      ),
       body: Container(
         child: Column(
           children: [

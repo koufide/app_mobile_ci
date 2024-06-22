@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
       },
 
       debugShowCheckedModeBanner: false,
-      theme: MyAppTheme.themes[1],
+      theme: MyAppTheme.themes[0],
       // home: const HomePage(),
     );
     // throw UnimplementedError();
