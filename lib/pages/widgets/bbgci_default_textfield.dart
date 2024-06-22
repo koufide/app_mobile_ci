@@ -2,6 +2,7 @@ import 'package:app_mobile_ci/pages/configuration/colors.dart';
 import 'package:app_mobile_ci/pages/configuration/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_sizer/flutter_sizer.dart';
 
 class BbgciDefaultTextfield extends StatefulWidget {
   final TextEditingController textController;
@@ -49,13 +50,24 @@ class _BbgciDefaultTextfieldState extends State<BbgciDefaultTextfield> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: Constants.defaultPadding),
-      padding: EdgeInsets.only(left: 5, right: 5),
+      margin: EdgeInsets.symmetric(horizontal: 4.0.w),
+      padding: EdgeInsets.only(left:8.dp, right: 8.dp),
+      //color: Colors.lime,
       decoration: BoxDecoration(
-        border: Border.all(
-          color: AppColors.secondary,
-          width: 1,
-        )
+          color: AppColors.blancbbgci,
+          border: Border.all(
+            color: AppColors.secondary,
+            width: 1,
+          ),
+          borderRadius: BorderRadius.all(Radius.circular(30.0)),
+          boxShadow: [
+            BoxShadow(
+                color: AppColors.secondary,
+                offset: Offset(2.0, 2.0),
+                blurRadius: 2,
+                spreadRadius: 0.5
+            )
+          ]
       ),
       child: TextField(
         focusNode: _focusNode,
@@ -69,6 +81,9 @@ class _BbgciDefaultTextfieldState extends State<BbgciDefaultTextfield> {
           ),
           hintText: widget.placeholder,
           border: InputBorder.none,
+          // border: OutlineInputBorder(
+          //   borderRadius: BorderRadius.all(Radius.circular(30.0))
+          // ),
         ),
       ),
     );
