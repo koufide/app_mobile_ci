@@ -2,6 +2,7 @@
 // import 'package:app_mobile_ci/pages/home/widgets/home.drawer.dart';
 // import 'package:app_mobile_ci/pages/widgets/drawer.widget.dart';
 // import 'dart:io';
+import 'package:app_mobile_ci/pages/auth/connexion_page.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter/services.dart';
 // import 'package:flutter_exit_app/flutter_exit_app.dart';
@@ -165,38 +166,34 @@ class HomePage extends StatelessWidget{
               ),
 
               ListTile(
+                leading:  Icon(Icons.login,
+                  color: Theme.of(context).iconTheme.color,
+                ),
+                 trailing: const Icon(Icons.navigate_next),
+                onTap: () {
+                  final route = MaterialPageRoute(builder: (ctxt) => ConnexionPage());
+                  // Navigator.push(context, "/connexion");
+                  Navigator.pushReplacement(context, route);
+                },
+                title: Text(
+                  "Connexion",
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+              ),
+
+              ListTile(
                 leading:  Icon(Icons.logout,
                   color: Theme.of(context).iconTheme.color,
                 ),
                 // trailing: const Icon(Icons.navigate_next),
                 onTap: () {
-                  //  Navigator.of(context).pop();
-                  // Navigator.pop(context);
-                  // exit(0);
-                  // SystemNavigator.pop();
-
-                  // AlertDialog(
-                  //   title: Text('Are you sure you want to exit?'),
-                  //   content: Text('Unsaved donnees will be lost'),
-                  //   actions: [
-                  //     TextButton(
-                  //       onPressed: () => Navigator.pop(context),
-                  //       child: Text('Cancel'),
-                  //     ),
-                  //     TextButton(
-                  //       onPressed: () => exitApp(),
-                  //       child: Text('Exit'),
-                  //     ),
-                  //   ],
-                  // );
-
-
                 },
                 title: Text(
                   "Déconnexion",
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
               ),
+
 
             ],
           ),

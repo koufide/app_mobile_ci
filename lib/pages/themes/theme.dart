@@ -3,16 +3,22 @@ import 'package:flutter/material.dart';
 class MyAppTheme {
   static  List<ThemeData> themes = [
     ThemeData(
+      useMaterial3: true,
+        // Color(0xFFFF3C00),
         primaryColor: Colors.black,
-        primarySwatch: Colors.orange,
-        primaryColorDark: Colors.black,
-        appBarTheme:  const AppBarTheme(color: Colors.lime),
+        //primarySwatch: Colors.black,
+        primaryColorDark: Color(0xFFFF3C00),
+
+        appBarTheme:  const AppBarTheme(color:  Colors.black),
+
         fontFamily: 'Poppins',
+
         textTheme:  const TextTheme(
-          bodySmall: TextStyle(fontSize: 22),
+          bodySmall: TextStyle(fontSize: 12),
           bodyMedium: TextStyle(fontSize: 22),
           bodyLarge: TextStyle(fontSize: 32),
         ),
+
         iconTheme: const IconThemeData(
           size: 53,
           color: Colors.black,
@@ -20,19 +26,21 @@ class MyAppTheme {
     ),
 
     ThemeData(
-        primaryColor: Colors.orange,
+        primaryColor: Color(0xFFFF3C00),
+        //primarySwatch: Color(0xFFFF3C00),
         // primarySwatch: Colors.black,
-        // primarySwatch: Colors.black,
-        appBarTheme:  const AppBarTheme(color: Colors.blueAccent),
+        primaryColorDark: Colors.black,
+
+        appBarTheme:  const AppBarTheme(color:  Color(0xFFFF3C00)),
         fontFamily: 'Poppins',
         textTheme:  const TextTheme(
-          bodySmall: TextStyle(fontSize: 22),
+          bodySmall: TextStyle(fontSize: 12),
           bodyMedium: TextStyle(fontSize: 22),
           bodyLarge: TextStyle(fontSize: 32),
         ),
         iconTheme:  const IconThemeData(
           size: 53,
-          color: Colors.cyan,
+          color: Color(0xFFFF3C00),
         )
     ),
 

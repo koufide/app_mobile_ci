@@ -1,3 +1,4 @@
+import 'package:app_mobile_ci/pages/auth/connexion_page.dart';
 import 'package:app_mobile_ci/pages/home/comptes.dart';
 import 'package:app_mobile_ci/pages/home/historiques.dart';
 import 'package:app_mobile_ci/pages/home/home.dart';
@@ -30,10 +31,11 @@ class MyApp extends StatelessWidget {
         "/services":(context)=> const ServicePage(),
         "/produits":(context)=> const ProduitPage(),
         "/comptes":(context)=> const ComptePage(),
+        "/connexion":(context)=> const ConnexionPage(),
       },
 
       debugShowCheckedModeBanner: false,
-      theme: MyAppTheme.themes[0],
+      theme: MyAppTheme.themes[1],
       // home: const HomePage(),
     );
     // throw UnimplementedError();

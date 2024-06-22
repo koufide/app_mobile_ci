@@ -1,6 +1,7 @@
 import 'dart:convert';
 
-import 'package:app_mobile_ci/pages/themes/colors.dart';
+import 'package:app_mobile_ci/pages/configuration/colors.dart';
+import 'package:app_mobile_ci/pages/configuration/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -17,7 +18,7 @@ class _ProduitPageState extends State<ProduitPage> {
   @override
   void initState() {
     super.initState();
-    http.get(Uri.parse("http://192.168.228.44:9000/produits")).then((resp) {
+    http.get(Uri.parse("${Constants.baseUrl}/produits")).then((resp) {
       // print(resp.body);
       setState(() {
         produits = json.decode(resp.body);
