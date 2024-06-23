@@ -1,6 +1,7 @@
 import 'package:app_mobile_ci/pages/configuration/colors.dart';
 import 'package:app_mobile_ci/pages/configuration/constants.dart';
 import 'package:app_mobile_ci/pages/configuration/theme.dart';
+import 'package:app_mobile_ci/pages/widgets/bbgci_default_checkbox.dart';
 import 'package:app_mobile_ci/pages/widgets/bbgci_default_textfield.dart';
 
 // import 'package:flutter/cupertino.dart';
@@ -109,7 +110,7 @@ class _ConnexionPageState extends State<ConnexionPage> {
               children: [
                 Expanded(
                   child: Padding(
-                    padding: EdgeInsets.only(left: 20.0),
+                    padding: const EdgeInsets.only(left: 20.0),
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: InkWell(
@@ -132,6 +133,11 @@ class _ConnexionPageState extends State<ConnexionPage> {
                       child: Row(
                         children: [
                           InkWell(
+                            onTap: () {
+                              setState(() {
+                                _rememberMe = !_rememberMe;
+                              });
+                            },
                             child: Text(
                               "Remember me",
                               style: TextStyle(
@@ -150,13 +156,15 @@ class _ConnexionPageState extends State<ConnexionPage> {
                           // ),
                           Checkbox(
                             value: _rememberMe,
-                            // groupValue: _rememberMe,
-                            onChanged: (bool? value){
+                            activeColor: AppColors.noirebbgci,
+                            checkColor: AppColors.blancbbgci,
+                            onChanged: (bool? value) {
                               setState(() {
                                 _rememberMe = value!;
                               });
                             },
                           ),
+                          // BbgciDefaultCheckbox(),
                         ],
                       ),
                     ),
@@ -164,6 +172,45 @@ class _ConnexionPageState extends State<ConnexionPage> {
                 ),
               ],
             ),
+
+            SizedBox(
+              height: 2.h,
+            ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ElevatedButton(
+                    onPressed: (){}
+                    , child: Text("Se connecter"),
+                  // style: ElevatedButton.styleFrom(
+                  //   minimumSize: Size(double.infinity, 10)
+                  // ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(right: Constants.defaultPaddingRight),
+                  // color: MyAppTheme.orangebbgci,
+                  //height: 20.dp,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15.dp),
+                    //border: Border.all(width: )
+                    color: MyAppTheme.orangebbgci,
+                  ),
+                  child: IconButton(
+                    onPressed: (){
+                    },
+                    icon: Icon(Icons.fingerprint,
+                    ),
+                    iconSize: 30.dp,
+                    splashColor: Colors.yellow,
+                    highlightColor: Colors.blue,
+                    color: MyAppTheme.blancbbgci,
+                  ),
+                ),
+
+              ],
+            ),
+
           ],
         ),
       ),

@@ -96,13 +96,13 @@ class MyAppTheme {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30),
         ),
-        fillColor: MaterialStateProperty.resolveWith((states) {
-          if (states.contains(MaterialState.selected)) {
-            return noirebbgci;
-          }
-          return orangebbgci;
-        }),
-        checkColor: MaterialStateProperty.all(blancbbgci),
+        // fillColor: MaterialStateProperty.resolveWith((states) {
+        //   if (states.contains(MaterialState.selected)) {
+        //     return noirebbgci;
+        //   }
+        //   return orangebbgci;
+        // }),
+        // checkColor: MaterialStateProperty.all(blancbbgci),
       ),
 
 
@@ -151,22 +151,22 @@ class MyAppTheme {
 
         // bouton radio
         radioTheme: RadioThemeData(
-          fillColor: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.selected)) {
-              return noirebbgci;
-            }
-            return orangebbgci;
-          }),
+          // fillColor: MaterialStateProperty.resolveWith((states) {
+          //   if (states.contains(MaterialState.selected)) {
+          //     return noirebbgci;
+          //   }
+          //   return orangebbgci;
+          // }),
 
-          overlayColor: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.hovered)) {
-              return noirebbgci.withOpacity(0.04);
-            }
-            if (states.contains(MaterialState.focused) || states.contains(MaterialState.pressed)) {
-              return noirebbgci.withOpacity(0.12);
-            }
-            return null;
-          }),
+          // overlayColor: MaterialStateProperty.resolveWith((states) {
+          //   if (states.contains(MaterialState.hovered)) {
+          //     return noirebbgci.withOpacity(0.04);
+          //   }
+          //   if (states.contains(MaterialState.focused) || states.contains(MaterialState.pressed)) {
+          //     return noirebbgci.withOpacity(0.12);
+          //   }
+          //   return null;
+          // }),
           splashRadius: 20.0,
           materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
 
@@ -177,14 +177,18 @@ class MyAppTheme {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30),
         ),
-        fillColor: MaterialStateProperty.resolveWith((states) {
-          if (states.contains(MaterialState.selected)) {
-            return noirebbgci;
-          }
-          return orangebbgci;
-        }),
-        checkColor: MaterialStateProperty.all(orangebbgci),
+        // fillColor: MaterialStateProperty.resolveWith((states) {
+        //   if (states.contains(MaterialState.selected)) {
+        //     return noirebbgci;
+        //   }
+        //   return orangebbgci;
+        // }),
+        // checkColor: MaterialStateProperty.all(orangebbgci),
       ),
+
+        // iconButtonTheme: IconButtonThemeData(
+        //   style:
+        // ),
 
 
 
