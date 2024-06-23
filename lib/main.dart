@@ -9,9 +9,27 @@ import 'package:app_mobile_ci/pages/home/virements.dart';
 import 'package:app_mobile_ci/pages/configuration/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
+// import 'package:flutter_localization/flutter_localization.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'package:easy_localization/easy_localization.dart';
+// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+// import 'generated/locale_keys.g.dart';
+// import 'lang_view.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+
+  runApp(EasyLocalization(
+    child: const MyApp(),
+    supportedLocales: [
+      Locale('en', 'US'),
+      Locale('fr', 'FR'),
+      Locale('es', 'ES')
+    ],
+    path: 'assets/translations', // <-- change the path of the translation files
+    fallbackLocale: Locale('en', 'US'),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -20,8 +38,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlutterSizer(builder: (context, orientation, screenType) {
+      //print("context ==> $context");
       return MaterialApp(
-        // print(context);
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
 
         initialRoute: '/',
         routes: {
