@@ -177,40 +177,105 @@ class _ConnexionPageState extends State<ConnexionPage> {
               height: 2.h,
             ),
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                ElevatedButton(
-                    onPressed: (){}
-                    , child: Text("Se connecter"),
-                  // style: ElevatedButton.styleFrom(
-                  //   minimumSize: Size(double.infinity, 10)
-                  // ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(right: Constants.defaultPaddingRight),
-                  // color: MyAppTheme.orangebbgci,
-                  //height: 20.dp,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15.dp),
-                    //border: Border.all(width: )
-                    color: MyAppTheme.orangebbgci,
-                  ),
-                  child: IconButton(
-                    onPressed: (){
-                    },
-                    icon: Icon(Icons.fingerprint,
+            Padding(
+              padding: EdgeInsets.all(Constants.defaultPaddingRight),
+              child: Row(
+                children: [
+                  Expanded(
+                    flex: 9, //90% de l espace
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Text("Se connecter"),
+                      style: ElevatedButton.styleFrom(
+                        // minimumSize: Size(double.infinity, 10),
+                        backgroundColor: MyAppTheme.orangebbgci,
+                        foregroundColor: MyAppTheme.blancbbgci,
+                        minimumSize: Size(double.infinity, 6.h)
+                        // textStyle: TextStyle(
+                        //   color: MyAppTheme.blancbbgci,
+                        // ),
+                      ),
                     ),
-                    iconSize: 30.dp,
-                    splashColor: Colors.yellow,
-                    highlightColor: Colors.blue,
-                    color: MyAppTheme.blancbbgci,
                   ),
-                ),
+                  // Spacer(
+                  //   flex: 1,
+                  // ),
+                  Container(
+                    margin: EdgeInsets.only(left: 10.dp),
+                    // color: MyAppTheme.orangebbgci,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(10.dp)),
+                      color: MyAppTheme.orangebbgci,
 
-              ],
+                    ),
+                    // height: 5.h,
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.fingerprint,
+                      ),
+                      iconSize: 30.dp,
+                      splashColor: Colors.yellow,
+                      highlightColor:Colors.black,
+                      // highlightColor: MyAppTheme.noirebbgci,
+                      color: MyAppTheme.blancbbgci,
+                    ),
+                  ),
+
+                  // Expanded(child: child),
+                ],
+              ),
             ),
 
+            //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            // children: [
+
+            //   Container(
+            //     margin: EdgeInsets.only(right: Constants.defaultPaddingRight),
+            //     // color: MyAppTheme.orangebbgci,
+            //     //height: 20.dp,
+            //     decoration: BoxDecoration(
+            //       borderRadius: BorderRadius.circular(15.dp),
+            //       //border: Border.all(width: )
+            //       color: MyAppTheme.orangebbgci,
+            //     ),
+
+            //   ),
+            // ],
+
+            // ,Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //   children: [
+            //     ElevatedButton(
+            //         onPressed: (){}
+            //         , child: Text("Se connecter"),
+            //       // style: ElevatedButton.styleFrom(
+            //       //   minimumSize: Size(double.infinity, 10)
+            //       // ),
+            //     ),
+            //     Container(
+            //       margin: EdgeInsets.only(right: Constants.defaultPaddingRight),
+            //       // color: MyAppTheme.orangebbgci,
+            //       //height: 20.dp,
+            //       decoration: BoxDecoration(
+            //         borderRadius: BorderRadius.circular(15.dp),
+            //         //border: Border.all(width: )
+            //         color: MyAppTheme.orangebbgci,
+            //       ),
+            //       child: IconButton(
+            //         onPressed: (){
+            //         },
+            //         icon: const Icon(Icons.fingerprint,
+            //         ),
+            //         iconSize: 30.dp,
+            //         splashColor: Colors.yellow,
+            //         highlightColor: Colors.blue,
+            //         color: MyAppTheme.blancbbgci,
+            //       ),
+            //     ),
+            //
+            //   ],
+            // ),
           ],
         ),
       ),

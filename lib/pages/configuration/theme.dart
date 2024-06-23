@@ -7,9 +7,9 @@ class MyAppTheme {
   static Color orangebbgci = const Color(0xFFFF3C00);
   static Color blancbbgci = const Color(0xFFFFFFFF);
 
-  static const Color primary = const Color(0xFF000000);
-  static const Color secondary = const Color(0xFFFF3C00);
-  static const Color thirdly = const Color(0xFFFFFFFF);
+  static const Color primary =  Color(0xFF000000);
+  static const Color secondary =  Color(0xFFFF3C00);
+  static const Color thirdly =  Color(0xFFFFFFFF);
 
   //--------------
   static  Color appBarTitleColor = blancbbgci;
@@ -41,7 +41,11 @@ class MyAppTheme {
       //primarySwatch: Colors.black,
       primaryColorDark: noirebbgci,
       secondaryHeaderColor: blancbbgci,
-      textTheme: const TextTheme(
+      textTheme:  TextTheme(
+        // button: TextStyle(
+        //   color: blancbbgci,
+        //   backgroundColor: orangebbgci,
+        // ),
           // bodySmall: TextStyle(fontSize: 12),
           // bodyMedium: TextStyle(fontSize: 22),
           // bodyLarge: TextStyle(fontSize: 32),
