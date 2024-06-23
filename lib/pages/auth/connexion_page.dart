@@ -48,6 +48,22 @@ class _ConnexionPageState extends State<ConnexionPage> {
   //   setState(() {});
   // }
 
+  void _changeLanguage(String? newValue){
+    _langue = newValue!;
+    print("newValue ==> $newValue");
+
+    if(newValue != null && newValue =="US"){
+      context.setLocale(Locale('en', 'US'));
+    }
+
+    if(newValue != null && newValue =="FR"){
+      context.setLocale(Locale('fr', 'FR'));
+    }
+
+    if(newValue != null && newValue =="ES"){
+      context.setLocale(Locale('es', 'ES'));
+    }
+  }
 
 
 
@@ -130,21 +146,7 @@ class _ConnexionPageState extends State<ConnexionPage> {
                                 value: _langue,
                                   onChanged: (String? newValue){
                                   setState(() {
-                                    _langue = newValue!;
-                                    print("newValue ==> $newValue");
-
-                                    if(newValue != null && newValue =="US"){
-                                    context.setLocale(Locale('en', 'US'));
-                                    }
-
-                                    if(newValue != null && newValue =="FR"){
-                                      context.setLocale(Locale('fr', 'FR'));
-                                    }
-
-                                    if(newValue != null && newValue =="ES"){
-                                      context.setLocale(Locale('es', 'ES'));
-                                    }
-
+                                    _changeLanguage(newValue);
 
                                   });
                                   },
