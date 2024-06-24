@@ -78,7 +78,7 @@ flutter:
     - assets/images/3.PNG
     - assets/images/4.PNG
     - assets/images/logo_bbg.png
-    - assets/icons/perso_bbgci2.png
+    - assets/icons/perso_bbgci3.png
     - assets/translations/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
@@ -127,18 +127,18 @@ flutter:
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
-  image_path: "assets/icons/perso_bbgci2.png"
+  image_path: "assets/icons/perso_bbgci3.png"
   min_sdk_android: 16 # android min sdk min:16, default 21
   remove_alpha_ios: true
   web:
     generate: true
-    image_path: "assets/icons/perso_bbgci2.png"
+    image_path: "assets/icons/perso_bbgci3.png"
     background_color: "#hexcode"
     theme_color: "#hexcode"
   windows:
     generate: true
-    image_path: "assets/icons/perso_bbgci2.png"
+    image_path: "assets/icons/perso_bbgci3.png"
 #    icon_size: 48 # min:48, max:256, default: 48
   macos:
     generate: true
-    image_path: "assets/icons/perso_bbgci2.png"
+    image_path: "assets/icons/perso_bbgci3.png"
