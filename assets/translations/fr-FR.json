@@ -1,4 +1,8 @@
 {
   "title": "Titre",
-  "welcome": "Bienvenu, "
+  "welcome": "Bienvenu, ",
+  "email": "Email",
+  "password": "Mot de passe",
+  "password forgotten": "Mot de passe oublié",
+  "remember me": "Souviens toi de moi"
 }

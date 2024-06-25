@@ -1,38 +1,8 @@
 {
+  "title": "Título",
   "welcome": "Bienvenido, ",
-  "msg": "Hola {} en el mundo {} ",
-  "msg_named": "{} están escritos en el idioma {lang}",
-  "clickMe": "clickMe",
-  "profile": {
-    "reset_password": {
-      "label": "Restablecer contraseña",
-      "nombre_usuario": "nombre de usuario",
-      "contraseña": "contraseña"
-    }
-  },
-  "clicked": {
-    "cero": "¡Has hecho clic {} veces!",
-    "one": "¡Has hecho clic {} veces!",
-    "dos": "¡Has hecho clic {} veces!",
-    "pocas": "¡Has hecho clic {} veces!",
-    "muchas": "¡Has hecho clic {} veces!",
-    "otros": "¡Has hecho clic {} veces!"
-  },
-  "amount": {
-    "cero": "Tu importe : {} ",
-    "uno": "Su importe : {} ",
-    "dos": "Su importe : {} ",
-    "pocos": "Su importe : {} ",
-    "muchos": "Su importe : {} ",
-    "otros": "Su importe : {} "
-  },
-  "género": {
-    "hombre": "Hi man ;) ",
-    "female": "Hola chica :)",
-    "with_arg": {
-      "male": "Hola hombre ;) {}",
-      "female": "Hola chica :) {}"
-    }
-  },
-  "reset_locale": "Reset Language"
+  "email": "Correo electrónico",
+  "password": "contraseña",
+  "password forgotten": "Contraseña olvidada",
+  "remember me": "Recuérdame"
 }

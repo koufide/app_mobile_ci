@@ -165,13 +165,14 @@ class _ConnexionPageState extends State<ConnexionPage> {
                 ],
               ),
               SizedBox(
-                height: 1.h,
+                height: 0.25.h,
                 child: Container(
-                  color: AppColors.secondary,
+                  color: AppColors.primary,
                   //margin: EdgeInsets.only(top: 5.dp),
                   //padding: EdgeInsets.only(top: 10.dp),
                 ),
               ),
+
               SizedBox(
                 height: 2.h,
                 // child: Container(
@@ -180,34 +181,40 @@ class _ConnexionPageState extends State<ConnexionPage> {
                 //   //padding: EdgeInsets.only(top: 10.dp),
                 // ),
               ),
+
               BbgciDefaultTextfield(
                 textController: _emailController,
-                placeholder: "Email",
+                placeholder: context.tr("email"),
                 prefixIcon: Icons.person,
                 obscureText: false,
               ),
+
               SizedBox(
                 height: 2.h,
               ),
+
               BbgciDefaultTextfield(
                 textController: _passwordController,
-                placeholder: "Mot de passe",
+                placeholder: context.tr("password"),
                 prefixIcon: Icons.lock,
                 obscureText: true,
               ),
+
               SizedBox(
                 height: 2.h,
               ),
+
               Row(
                 children: [
+
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 20.0),
+                      padding: const EdgeInsets.only(left: 2.0.dp),
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: InkWell(
                           child: Text(
-                            "Password forgotten",
+                            context.tr("password forgotten"),
                             style: TextStyle(
                               color: MyAppTheme.orangebbgci,
                               // fontSize: Theme.of(context).textTheme.bodySmall,
@@ -217,9 +224,10 @@ class _ConnexionPageState extends State<ConnexionPage> {
                       ),
                     ),
                   ),
+
                   Expanded(
                     child: Padding(
-                      padding: EdgeInsets.only(right: 20.0),
+                      padding: EdgeInsets.only(right: 2.0.dp),
                       child: Align(
                         alignment: Alignment.centerRight,
                         child: Row(
@@ -231,7 +239,7 @@ class _ConnexionPageState extends State<ConnexionPage> {
                                 });
                               },
                               child: Text(
-                                "Remember me",
+                                context.tr("remember me"),
                                 style: TextStyle(
                                   color: MyAppTheme.orangebbgci,
                                 ),

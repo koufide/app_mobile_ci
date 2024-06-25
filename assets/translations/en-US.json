@@ -1,9 +1,9 @@
 {
   "welcome": "Welcome, ",
-  "title": "Hello",
-  "msg": "Hello {} in the {} world ",
-  "msg_named": "{} are written in the {lang} language",
-  "clickMe": "Click me",
+  "email": "Email",
+  "password": "Password",
+  "password forgotten": "Password forgotten",
+  "remember me": "Remember me",
   "profile": {
     "reset_password": {
       "label": "Reset Password",
