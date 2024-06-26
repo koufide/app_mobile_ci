@@ -10,13 +10,17 @@ class BbgciDefaultTextfield extends StatefulWidget {
   final TextInputType inputType;
   final String placeholder;
   final IconData? prefixIcon;
+  final IconData? suffixIcon;
   final bool obscureText;
+  
+  
 
   const BbgciDefaultTextfield({
     super.key,
     required this.textController,
     required this.placeholder,
     this.prefixIcon,
+    this.suffixIcon,
     this.focusNode,
     this.obscureText = false,
     this.inputType = TextInputType.text,
@@ -81,6 +85,17 @@ class _BbgciDefaultTextfieldState extends State<BbgciDefaultTextfield> {
           ),
           hintText: widget.placeholder,
           border: InputBorder.none,
+
+          suffixIcon: IconButton(
+            icon:Icon(
+              widget.suffixIcon?? Icons.fingerprint_outlined,
+              ),
+            onPressed: (){
+              print("==> Fingerprint icon pressed");
+            },
+          ), 
+
+
           // border: OutlineInputBorder(
           //   borderRadius: BorderRadius.all(Radius.circular(30.0))
           // ),

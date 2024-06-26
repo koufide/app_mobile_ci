@@ -186,6 +186,7 @@ class _ConnexionPageState extends State<ConnexionPage> {
                 textController: _emailController,
                 placeholder: context.tr("email"),
                 prefixIcon: Icons.person,
+                // suffixIcon: null,
                 obscureText: false,
               ),
 
@@ -197,6 +198,7 @@ class _ConnexionPageState extends State<ConnexionPage> {
                 textController: _passwordController,
                 placeholder: context.tr("password"),
                 prefixIcon: Icons.lock,
+                suffixIcon: Icons.fingerprint,
                 obscureText: true,
               ),
 
@@ -209,7 +211,7 @@ class _ConnexionPageState extends State<ConnexionPage> {
 
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 2.0.dp),
+                      padding:  EdgeInsets.only(left: 2.0.dp),
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: InkWell(
@@ -221,6 +223,8 @@ class _ConnexionPageState extends State<ConnexionPage> {
                             ),
                           ),
                         ),
+
+                        
                       ),
                     ),
                   ),
@@ -309,17 +313,17 @@ class _ConnexionPageState extends State<ConnexionPage> {
 
                       ),
                       // height: 5.h,
-                      child: IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.fingerprint,
-                        ),
-                        iconSize: 30.dp,
-                        splashColor: Colors.yellow,
-                        highlightColor:Colors.black,
-                        // highlightColor: MyAppTheme.noirebbgci,
-                        color: MyAppTheme.blancbbgci,
-                      ),
+                      // child: IconButton(
+                      //   onPressed: () {},
+                      //   icon: const Icon(
+                      //     Icons.fingerprint,
+                      //   ),
+                      //   iconSize: 30.dp,
+                      //   splashColor: Colors.yellow,
+                      //   highlightColor:Colors.black,
+                      //   // highlightColor: MyAppTheme.noirebbgci,
+                      //   color: MyAppTheme.blancbbgci,
+                      // ),
                     ),
 
                     // Expanded(child: child),
